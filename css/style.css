@@ -10,11 +10,25 @@ body {
   min-width: 375px;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
-  height: 100vh;
+  height: 100dvh;
+  color: hsl(234, 12%, 34%);
+}
+
+.light--title {
+  font-weight: 200;
+}
+
+.bold--title {
+  font-weight: 600;
+}
+
+.title--text-content {
+  font-weight: 200;
 }
 
 .container {
   margin: 0 auto;
+  width: 90%;
   display: grid;
   gap: 60px;
 }
@@ -28,7 +42,24 @@ body {
   height: 200px;
   background-color: #fff;
   padding: 20px;
-  box-shadow: 0 0 25px rgba(52, 95, 145, 0.25);
+  box-shadow: 0 5px 25px 0 rgba(52, 95, 145, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card--title {
+  font-weight: 600;
+}
+
+.card--img {
+  margin-left: auto;
+}
+
+.text-content {
+  margin-top: -10px;
+  font-weight: 200;
 }
 
 .title {
@@ -79,22 +110,22 @@ body {
   border-right: 2px solid hsl(0, 0%, 98%);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1440px) {
   body {
-    max-width: 1440px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .container {
     display: block;
+    width: 100%;
   }
   .cards {
-    border: 2px solid orange;
     display: grid;
     grid-template-columns: repeat(3, 350px);
     gap: 20px;
     grid-column: 1/-1;
+    justify-content: center;
   }
 
   .title {
@@ -113,6 +144,11 @@ body {
     grid-row: 2;
   }
 
+  .supervisor,
+  .calculator {
+    margin-top: 120px;
+  }
+
   .calculator {
     margin-right: auto;
   }
@@ -128,5 +164,6 @@ body {
   .karma {
     grid-column: 2/3;
     grid-row: 3;
+    margin-top: -120px;
   }
 }
